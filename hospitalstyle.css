@@ -1,0 +1,369 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8fbff;
+    color: #18324a;
+}
+
+header {
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo, footer h2 {
+    color: #123c62;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.logo span, footer span {
+    color: #16a6a1;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #334e68;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #16a6a1;
+}
+
+.nav-btn, .primary-btn {
+    background: #16a6a1;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover, .primary-btn:hover {
+    background: #117c79;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 85px 25px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.tagline, .section-heading > p:first-child {
+    color: #16a6a1;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.25;
+    margin: 18px 0;
+    color: #123c62;
+}
+
+.hero-content > p:not(.tagline) {
+    color: #66788a;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.section {
+    padding: 75px 25px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    color: #123c62;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.section-heading > p:last-child {
+    color: #66788a;
+}
+
+.service-container, .doctor-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.service-card:hover, .doctor-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.service-card span {
+    font-size: 38px;
+}
+
+.service-card h3 {
+    margin: 15px 0 10px;
+    color: #123c62;
+}
+
+.service-card p, .doctor-card p {
+    color: #738397;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.doctors {
+    background: #edf7fa;
+}
+
+.doctor-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.doctor-card {
+    background: white;
+    padding: 18px;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.doctor-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.doctor-card h3 {
+    margin-top: 15px;
+    color: #123c62;
+}
+
+.select-doctor {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    background: #16a6a1;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.appointment form {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input, .form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dce5ec;
+    border-radius: 7px;
+    outline: none;
+    font-size: 13px;
+    background: #fbfdff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #16a6a1;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    grid-column: 1 / -1;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    background: #16a6a1;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #117c79;
+}
+
+#successMessage {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #12834d;
+    font-weight: 600;
+}
+
+footer {
+    background: #123c62;
+    text-align: center;
+    padding: 35px 20px;
+    color: white;
+}
+
+footer h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 13px;
+    margin-top: 8px;
+    color: #d4e2ed;
+}
+
+@media(max-width: 850px) {
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+}
+
+@media(max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+
+    .service-container, .doctor-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .appointment form {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .full-width, .submit-btn, #successMessage {
+        grid-column: 1;
+    }
+}
